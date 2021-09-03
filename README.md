@@ -66,7 +66,7 @@ __Exemplo de corpo__:
  
 - Atualizar todos os dados de um produtos
  
-> Método: PUT
+> Método: PATCH
 > 
 > Endpoint: http://localhost:3000/produtos/<id\> 
  
