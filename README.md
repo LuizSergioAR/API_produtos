@@ -25,7 +25,7 @@ Existem algumas formas de modelar o banco, podendo utilizar o comando docker exe
 
 Modelagem:
 
-
+![ScreenShot](https://github.com/LuizSergioAR/API_produtos/blob/main/banco.png)
 
 ----
 
