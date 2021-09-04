@@ -37,7 +37,7 @@ Modelagem:
 >
 > Endpoint: http://localhost:3000/produtos/
 
-- Retorno esperado:
+Retorno esperado:
 
 ![ScreenShot](https://github.com/LuizSergioAR/API_produtos/blob/main/imagens/Retorno_get_todos.png)
 
@@ -47,7 +47,7 @@ Modelagem:
 >
 > Endpoint: http://localhost:3000/produtos/<id\> 
 
-- Retorno esperado:
+Retorno esperado:
 
 ![ScreenShot](https://github.com/LuizSergioAR/API_produtos/blob/main/imagens/Retorno_get_um.png)
  
@@ -68,7 +68,7 @@ __Exemplo de corpo__:
 }
 ```
 
-- Retorno esperado:
+Retorno esperado:
 
 ![ScreenShot](https://github.com/LuizSergioAR/API_produtos/blob/main/imagens/Retorno_post.png)
 
@@ -91,7 +91,7 @@ __Exemplo de corpo__:
 }
 ```
 
-- Retorno esperado:
+Retorno esperado:
 
 ![ScreenShot](https://github.com/LuizSergioAR/API_produtos/blob/main/imagens/Retorno_patch.png)
  
@@ -105,6 +105,6 @@ __Exemplo de corpo__:
 > 
 > Endpoint: http://localhost:3000/produtos/<id\>
 
-- Retorno esperado:
+Retorno esperado:
 
 ![ScreenShot](https://github.com/LuizSergioAR/API_produtos/blob/main/imagens/Retorno_delete.png)
