@@ -9,19 +9,19 @@
 
 ## Como executar
 
-docker-compose up -d para criar as imagens do node e do banco mysql
+```docker-compose up -d``` para criar as imagens do node e do banco mysql
 
-docker exec -it app bash para executar e entrar na imagem do node
+```docker exec -it app bash``` para executar e entrar na imagem do node
 
-npm install para instalar as dependências
+```npm install``` para instalar as dependências
 
-npm start para iniciar a API
+```npm start``` para iniciar a API
 
 ----
 
 ## Como criar a tabela no banco
 
-Existem algumas formas de modelar o banco, podendo utilizar o comando docker exec -it db bash e utilizando comandos do mysql para a modelagem, mas a forma que eu recomendo é utilizando a modelagem do banco que está nomeada como "modelagem-produtos.mwb" e inserir pelo mysql workbench, pois é possivel acessar o banco pela porta localhost:3306
+Existem algumas formas de modelar o banco, podendo utilizar o comando ```docker exec -it db bash``` e utilizando comandos do mysql para a modelagem, mas a forma que eu recomendo é utilizando a modelagem do banco que está nomeada como "modelagem-produtos.mwb" e inserir pelo mysql workbench, pois é possivel acessar o banco pelo endereço ```localhost:3306```
 
 Modelagem:
 
