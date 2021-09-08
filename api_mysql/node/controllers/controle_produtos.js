@@ -12,13 +12,13 @@ exports.GetProdutos = async (req, res, next) => {
             produtos: result.map(prod => {
 
                 return {
-                    id_produto: prod.id_produtos,
+                    id_produto: prod.id,
                     nome: prod.nome,
                     preco: prod.preco,
                     request: {
                         tipo: 'GET',
-                        descricao: 'Retorna os dados desse produto',
-                        url: 'http://localhost:3000/produtos/' + prod.id_produtos
+                        descricao: 'Retorna somente esse produto',
+                        url: 'http://localhost:3000/produtos/' + prod.id
                     }
                 }
             })
@@ -43,12 +43,12 @@ exports.PostProduto = async (req, res, next) => {
             mensagem: 'Produto inserido com sucesso',
             produtoCriado: {
 
-                id_produto: result.id_produtos,
+                id_produto: result.id,
                 nome: req.body.nome,
                 preco: req.body.preco,
                 request: {
-                    tipo: 'GET',
-                    descricao: 'Retorna todos produtos',
+                    tipo: 'POST',
+                    descricao: 'Insere um produto',
                     url: 'http://localhost:3000/produtos/'
                 }
             }
@@ -66,7 +66,7 @@ exports.GetUmProduto = async (req, res, next) => {
 
     try {
 
-        const result = await mysql.execute('SELECT * FROM produtos WHERE id_produtos = ?;',
+        const result = await mysql.execute('SELECT * FROM produtos WHERE id = ?;',
             [req.params.id_produto])
 
         if (result.length == 0) {
@@ -80,7 +80,7 @@ exports.GetUmProduto = async (req, res, next) => {
         const response = {
 
             produto: {
-                id_produto: result[0].id_produtos,
+                id_produto: result[0].id,
                 nome: result[0].nome,
                 preco: result[0].preco,
                 request: {
@@ -102,7 +102,7 @@ exports.UpdateProdutos = async (req, res, next) => {
 
     try {
 
-        const result = await mysql.execute('UPDATE produtos SET nome = ?, preco = ? WHERE id_produtos = ?;',
+        const result = await mysql.execute('UPDATE produtos SET nome = ?, preco = ? WHERE id = ?;',
             [req.body.nome, req.body.preco, req.params.id_produto])
 
         if (result.changedRows == 0) {
@@ -117,7 +117,7 @@ exports.UpdateProdutos = async (req, res, next) => {
             mensagem: 'Produto atualizado com sucesso',
             produtoAtualizado: {
 
-                id_produto: req.body.id_produtos,
+                id_produto: req.body.id,
                 nome: req.body.nome,
                 preco: req.body.preco,
                 request: {
@@ -139,7 +139,7 @@ exports.DeleteProduto = async (req, res, next) => {
 
     try {
 
-        const result = await mysql.execute('DELETE FROM produtos WHERE id_produtos = ?',
+        const result = await mysql.execute('DELETE FROM produtos WHERE id = ?',
             [req.params.id_produto])
 
         if (result.affectedRows == 0) {
