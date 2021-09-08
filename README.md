@@ -76,7 +76,7 @@ Retorno esperado:
 
 ### Rotas Update
  
-- Atualizar todos os dados de um produtos
+- Atualizar todos os dados de um produto
  
 > Método: PATCH
 > 
