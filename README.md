@@ -15,17 +15,9 @@
 
 ```npm install``` para instalar as dependências
 
+```npx knex migrate:latest``` para criar a tabela no banco
+
 ```npm start``` para iniciar a API
-
-----
-
-## Como criar a tabela no banco
-
-Existem algumas formas de modelar o banco, podendo utilizar o comando ```docker exec -it db bash``` e utilizando comandos do mysql para a modelagem, mas a forma que eu recomendo é utilizando a modelagem do banco que está nomeada como "modelagem-produtos.mwb" e inserir pelo mysql workbench, pois é possivel acessar o banco pelo endereço ```localhost:3306```
-
-Modelagem:
-
-![ScreenShot](https://github.com/LuizSergioAR/API_produtos/blob/main/imagens/banco.png)
 
 ----
 
